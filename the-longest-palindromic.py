@@ -14,7 +14,8 @@ def longest_palindromic(text):
             #     continue
             if (text1[i] != text1[len(text1)-i-1]) and flag == True:
                 max_str = ''
-                break
+                flag = False
+                #break
             if text1[i] == text1[len(text1)-i-1]:
                 if (flag == False) and len(max_str) < len(text1[i:len(text1) - i]):
                     max_str = text1[i:len(text1)-i]
@@ -34,7 +35,8 @@ def longest_palindromic(text):
             #     continue
             if (text2[i] != text2[len(text2)-i-1]) and flag == True:
                 max_str = ''
-                break
+                flag = False
+                #break
             if text2[i] == text2[len(text2)-i-1]:
                 if (flag == False) and len(max_str) < len(text2[i:len(text2)-i]):
                     max_str = text2[i:len(text2)-i]
@@ -45,8 +47,6 @@ def longest_palindromic(text):
         flag = False
         max_str = ''
 
-
-
     return main_max
 
 if __name__ == '__main__':
@@ -56,4 +56,5 @@ if __name__ == '__main__':
     print(longest_palindromic("abc"))# == "a", "The A"
     print(longest_palindromic(" a b c "))# == "a", "The A"
     print(longest_palindromic("abacada"))# == "aba", "The A"
-    print(longest_palindromic(" a b c"))# == "aba", "The A"
+    print(longest_palindromic(" a b c"))# == " a ", "The A"
+    print(longest_palindromic("babaddtattarrattatddetartrateedredividerb"))# == "redivider", "The A"
