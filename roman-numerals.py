@@ -33,6 +33,7 @@ def ret_data_func(input_data, num, roman_letter, ret_data, sub_flag):
         return input_data, ret_data, True, sub_flag
     sub_flag = False
     return input_data, ret_data, False, sub_flag
+
 if __name__ == '__main__':
     #These "asserts" using only for self-checking and not necessary for auto-testing
     print(checkio(6))  # == 'VI', '6'
